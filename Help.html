@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Home</title>
+<style type="text/css">
+<!--
+body {
+  background-color: #000066;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+body {
+	background-color: #000066;
+}
+.style17 {
+	color: #5C76DE;
+	font-size: xx-large;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.style21 {
+	color: #FFFFFF;
+	font-size: 36px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.style39 {color: #000066; font-size: xx-large; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; }
+.style41 {font-size: 24px; font-family: Arial, Helvetica, sans-serif; color: #00CCFF;}
+.style44 {font-size: 36px; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF;}
+.style49 {font-size: 36px}
+.style17 {
+  color: #5C76DE;
+  font-size: xx-large;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.style21 {
+  color: #FFFFFF;
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.style39 {
+  color: #000066;
+  font-size: xx-large;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+a.style17:link, a.style17:visited {
+  text-decoration: none;
+  color: #5C76DE;
+}
+a.style17:hover {
+  text-decoration: underline;
+}
+
+/* NEW: Banner styling */
+.banner-image {
+  width: 100%;
+  max-width: 1102px;
+  height: auto;
+  border: 4px solid #5C76DE;
+  box-shadow: 0 0 20px #5C76DE;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+/* Game Carousel Styles */
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 560px;
+  overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+td {
+  border: 2px solid #fff;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.game-body {
+  display: none;
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.game-body.active {
+  display: table-row-group;
+}
+
+img {
+  width: 460px;
+  height: 252px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+h1, h3, h4, p {
+  margin: 5px 0;
+  text-align: left;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.game-body1 {  display: none;
+  animation: slideIn 0.5s ease-out forwards;
+}
+.table-container1 {  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 560px;
+  overflow: hidden;
+}
+-->
+</style>
+</head>
+
+<body>
+
+<!-- BANNER AREA -->
+<div align="center">
+  <img class="banner-image" src="Img/banner.jpg" alt="Website Banner" />
+</div>
+
+<!-- NAVIGATION BAR -->
+<div align="center">
+  <table width="1102" height="74" border="0" align="center" cellpadding="5" cellspacing="6">
+    <tr>
+      <td><div align="center"><span class="style17"><a href="index.html" class="style17">HOME</a></span></div></td>
+      <td style="position: relative;">
+  <div align="center" class="style17" id="catalogToggle" style="cursor: pointer;">CATALOG</div>
+  <div id="catalogDropdown" style="display: none; position: absolute; top: 100%; left: 0; background-color: #5C76DE; border: 2px solid white; z-index: 999;">
+    <a href="Catalog.html" class="style17" style="display: block; padding: 8px 12px; color: white;">Horror</a>
+    <a href="Catalog Adventure.html" class="style17" style="display: block; padding: 8px 12px; color: white;">Adventure</a>
+    <a href="Catalog rougelike.html" class="style17" style="display: block; padding: 8px 12px; color: white;">rougelike</a>
+    <a href="Catalog shooter.html" class="style17" style="display: block; padding: 8px 12px; color: white;">Shooter</a>
+  </div>
+</td>
+ <td height="56" bgcolor="#5C76DE"><div align="center" class="style39">HELP</div></td>
+      
+      <td><div align="center"><span class="style17"><a href="Profile.html" class="style17">PROFILE</a></span></div></td>
+    </tr>
+  </table>
+</div>
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+<p class="style21">GUIDE</p>
+<table width="437" height="78" border="1" cellpadding="0" cellspacing="5">
+  <tr>
+    <td bgcolor="#666666"><span class="style44"><a href="Help buying.html" class="style44">Panduan Pembelian </a></span></td>
+  </tr>
+</table>
+
+
+<!-- HEADING -->
+<p class="style21">&nbsp;</p>
+
+<!-- GAME CAROUSEL --><!-- JS Carousel Script -->
+<script>
+  const bodies = document.querySelectorAll('.game-body');
+  let current = 0;
+  const total = bodies.length;
+
+  const indicator = document.getElementById('carouselIndicator');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  function showSlide(index) {
+    bodies[current].classList.remove('active');
+    current = (index + total) % total;
+    bodies[current].classList.add('active');
+    updateIndicator();
+  }
+
+  function updateIndicator() {
+    indicator.textContent = `${current + 1} of ${total}`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    showSlide(current - 1);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    showSlide(current + 1);
+  });
+
+  // Optional: auto-rotate every 5 seconds
+  setInterval(() => {
+    showSlide(current + 1);
+  }, 5000);
+
+  // Initial setup
+  updateIndicator();
+</script>
+<script>
+  const catalogToggle = document.getElementById('catalogToggle');
+  const catalogDropdown = document.getElementById('catalogDropdown');
+
+  catalogToggle.addEventListener('click', () => {
+    catalogDropdown.style.display = catalogDropdown.style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Optional: Hide dropdown when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!catalogToggle.contains(e.target) && !catalogDropdown.contains(e.target)) {
+      catalogDropdown.style.display = 'none';
+    }
+  });
+</script>
+
+
+</body>
+</html>
